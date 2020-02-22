@@ -2,8 +2,8 @@ package guru.springboot.mssc.beer.order.service.web.mappers;
 
 import guru.springboot.mssc.beer.order.service.domain.BeerOrderLine;
 import guru.springboot.mssc.beer.order.service.services.BeerService;
-import guru.springboot.mssc.beer.order.service.web.model.BeerDto;
-import guru.springboot.mssc.beer.order.service.web.model.BeerOrderLineDto;
+import guru.sfg.brewery.model.BeerDto;
+import guru.sfg.brewery.model.BeerOrderLineDto;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

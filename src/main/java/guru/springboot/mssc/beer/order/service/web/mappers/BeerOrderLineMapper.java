@@ -1,7 +1,7 @@
 package guru.springboot.mssc.beer.order.service.web.mappers;
 
 import guru.springboot.mssc.beer.order.service.domain.BeerOrderLine;
-import guru.springboot.mssc.beer.order.service.web.model.BeerOrderLineDto;
+import guru.sfg.brewery.model.BeerOrderLineDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

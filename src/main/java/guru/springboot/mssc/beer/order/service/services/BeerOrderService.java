@@ -1,7 +1,7 @@
 package guru.springboot.mssc.beer.order.service.services;
 
-import guru.springboot.mssc.beer.order.service.web.model.BeerOrderDto;
-import guru.springboot.mssc.beer.order.service.web.model.BeerOrderPagedList;
+import guru.sfg.brewery.model.BeerOrderDto;
+import guru.sfg.brewery.model.BeerOrderPagedList;
 import java.util.UUID;
 import org.springframework.data.domain.Pageable;
 

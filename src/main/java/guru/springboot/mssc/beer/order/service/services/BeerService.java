@@ -1,6 +1,6 @@
 package guru.springboot.mssc.beer.order.service.services;
 
-import guru.springboot.mssc.beer.order.service.web.model.BeerDto;
+import guru.sfg.brewery.model.BeerDto;
 import java.util.Optional;
 import java.util.UUID;
 
