@@ -5,6 +5,7 @@ import guru.springboot.mssc.beer.order.service.domain.BeerOrderEventEnum;
 import guru.springboot.mssc.beer.order.service.domain.BeerOrderStatusEnum;
 import guru.springboot.mssc.beer.order.service.repositories.BeerOrderRepository;
 import guru.springboot.mssc.beer.order.service.sm.BeerOrderStateChangeInterceptor;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
@@ -58,5 +59,16 @@ public class BeerOrderManagerImpl implements BeerOrderManager {
     sm.start();
 
     return sm;
+  }
+
+  @Override
+  public void processValidationResult(UUID beerOrderId, Boolean isValid) {
+    BeerOrder beerOrder = beerOrderRepository.getOne(beerOrderId);
+
+    if(isValid){
+      sendBeerOrderEvent(beerOrder, BeerOrderEventEnum.VALIDATION_PASSED);
+    } else {
+      sendBeerOrderEvent(beerOrder, BeerOrderEventEnum.VALIDATION_FAILED);
+    }
   }
 }
